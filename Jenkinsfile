@@ -6,7 +6,7 @@ pipeline {
     environment {
         SONAR_TOKEN = credentials('sonar-token')
         // JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
-        // PATH = "$(JAVA_HOME\\bin)"
+        // PATH = "${JAVA_HOME}\\bin;$(env.PATH)"
     }
     stages {
         stage('Build') {
